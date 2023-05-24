@@ -54,7 +54,7 @@
                 const seconds = Math.floor((timeElapsed % (1000 * 60)) / 1000);
 
                 // Update the timer display
-                timerElement.innerHTML = days + 'd ' + hours + 'h ' + minutes + 'm ' + seconds + 's' + '<br>since Malaysia 7-0 Singapore. May 11 2023';
+                timerElement.innerHTML = days + 'd ' + hours + 'h ' + (minutes < 10 ? '0' + minutes : minutes) + 'm ' + (seconds < 10 ? '0' + seconds : seconds) + 's' + '<br>since Malaysia 7-0 Singapore. May 11 2023';
             }
 
             updateTimer();
