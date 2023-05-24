@@ -18,6 +18,10 @@
             h2 {
                 font-weight: 400;
             }
+
+            #timer {
+                font-weight: bold;
+            }
         </style>
     </head>
     <body>
@@ -25,6 +29,31 @@
             <h1>Has Bernard Tan Resigned Yet?</h1>
             <br />
             <h2>NO.<br /><br />Neither Bernard Tan nor any key appointment holders from the Football Association of Singapore have resigned or taken accountability for the failures of Singapore football over the past 10 years.</h2>
+            <div id="timer"></div>
         </div>
+
+        <script>
+            const startDate = new Date('May 11, 2023').getTime();
+
+            const timerElement = document.getElementById('timer');
+            setInterval(updateTimer, 1000);
+
+            function updateTimer() {
+                // Get the current date and time
+                const now = new Date().getTime();
+
+                // Calculate the time elapsed
+                const timeElapsed = now - startDate;
+
+                // Calculate days, hours, minutes, and seconds
+                const days = Math.floor(timeElapsed / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((timeElapsed % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((timeElapsed % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((timeElapsed % (1000 * 60)) / 1000);
+
+                // Update the timer display
+                timerElement.innerHTML = days + 'd ' + hours + 'h ' + minutes + 'm ' + seconds + 's' + '<br>since Malaysia 7-0 Singapore. May 11 2023';
+            }
+        </script>
     </body>
 </html>
