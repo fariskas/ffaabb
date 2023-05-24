@@ -20,7 +20,9 @@
             }
 
             #timer {
+                display: block;
                 font-weight: bold;
+                margin-top: 40px;
             }
         </style>
     </head>
@@ -54,6 +56,8 @@
                 // Update the timer display
                 timerElement.innerHTML = days + 'd ' + hours + 'h ' + minutes + 'm ' + seconds + 's' + '<br>since Malaysia 7-0 Singapore. May 11 2023';
             }
+
+            updateTimer();
         </script>
     </body>
 </html>
